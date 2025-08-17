@@ -1,0 +1,240 @@
+@media (width <=1400px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .section-hero img {
+        width: 90%;
+    }
+
+    .section-hero .grid {
+        & .hero-heading {
+            font-size: 4.6rem;
+        }
+    }
+
+    .contact-title {
+        font-size: 3.2rem;
+    }
+
+}
+
+@media (width <=1200px) {
+
+    html {
+        font-size: 54%;
+    }
+
+    .section-contact--homepage {
+        width: 70%;
+    }
+
+    :is(.section-about, .section-blog, .section-course, .section-why--choose) .grid {
+        gap: 6.4rem;
+    }
+
+}
+
+@media (width <=998px) {
+
+    .section-contact .grid-two--cols {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-map iframe {
+        width: 100%;
+    }
+
+    .section-hero {
+
+        padding-bottom: 8rem;
+
+        & .grid-two--cols {
+            grid-template-columns: 1fr;
+
+            & .section-hero--content {
+                order: 1;
+            }
+        }
+    }
+
+    .section-hero--image img {
+        width: 40%;
+    }
+
+    .section-why--choose {
+        & .choose-center--div {
+            order: -1;
+
+            & figure::before {
+                display: none;
+            }
+
+            & figure::after {
+                display: none;
+            }
+        }
+    }
+
+    .grid-four--cols:not(footer .grid-four--cols) {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    footer .grid-four--cols {
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        text-align: center;
+
+        & .footer-1--div {
+            grid-area: 2 / 1 / 3 / -1;
+            margin-top: 6.4rem;
+            text-align: center;
+
+            & .social-footer-icons {
+                justify-content: center;
+            }
+        }
+    }
+
+    .section-contact--homepage {
+        width: 85%;
+    }
+
+}
+
+@media (width <=768px) {
+
+    .grid-three--cols,
+    .grid-two--cols {
+        grid-template-columns: 1fr;
+    }
+
+    .section-why--choose {
+
+        & img {
+            width: 40%;
+        }
+
+        & .text-align--right .why-choose--div {
+            align-items: start;
+        }
+    }
+
+    
+
+    body.show-mobile-menu header:before {
+        content: '';
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, .3);
+        /* z-index: 20; */
+    }
+
+    body.show-mobile-menu .fa-bars {
+        display: none;
+    }
+
+    header .navbar {
+        position: fixed;
+        top: 0;
+        left: -50%;
+        background-color: white;
+        height: 100%;
+        width: 50%;
+        z-index: 110;
+        transition: left ease 0.2s;
+        -webkit-transition: left ease 0.2s;
+        -moz-transition: left ease 0.2s;
+        -ms-transition: left ease 0.2s;
+        -o-transition: left ease 0.2s;
+
+        & ul {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10rem;
+            align-items: center;
+            padding-inline: 3rem;
+
+            & li {
+                width: 100%;
+                text-align: center;
+
+                &:hover {
+                    background-color: aqua;
+                    border-radius: 50px;
+                    -webkit-border-radius: 50px;
+                    -moz-border-radius: 50px;
+                    -ms-border-radius: 50px;
+                    -o-border-radius: 50px;
+                }
+
+                & a {
+                    padding: 1rem;
+                    font-size: large;
+                    line-height: 3;
+
+                    &:after {
+                        display: none;
+                    }
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    body.show-mobile-menu .navbar {
+        left: 0;
+    }
+
+    .navbar .fa-xmark,
+    header .fa-bars {
+        display: block;
+    }
+
+    .fa-bars,
+    .fa-xmark {
+        font-size: large;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+
+        &:hover {
+            background: black;
+            color: white;
+        }
+    }
+
+    .fa-bars {
+        position: absolute;
+        top: 1.8rem;
+        right: 2rem;
+        padding: 2rem;
+    }
+
+    .fa-xmark {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        padding: 18px 20px;
+    }
+
+}
+
+@media (width <=560px) {
+    .section-hero .grid {
+        & .hero-heading {
+            font-size: 3rem;
+        }
+        & .hero-para{
+            font-size: 1.6rem;
+        }
+    }
+}
